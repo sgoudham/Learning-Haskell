@@ -2,6 +2,7 @@ dist
 dist-*
 cabal-dev
 *.o
+*.exe
 *.hi
 *.hie
 *.chi
@@ -21,3 +22,5 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+/.idea/
+/.vscode/
