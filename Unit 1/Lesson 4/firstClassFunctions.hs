@@ -10,10 +10,11 @@ isEven myFunction x = if even x
                       then myFunction x
                       else x
 
-
 ifEvenDouble :: Integral p => p -> p
 ifEvenDouble x = isEven double x
 ifEvenInc :: Integral p => p -> p
 ifEvenInc x = isEven inc x
 ifEvenSquare :: Integral p => p -> p
 ifEvenSquare x = isEven square x
+ifEvenCube :: Integral a => a -> a
+ifEvenCube x = isEven (\x -> x ^ 3) x
