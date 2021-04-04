@@ -23,6 +23,7 @@ double = (\x -> x * 2)
 square :: Integer -> Integer
 square = (\x -> x ^ 2)
 
+counter :: Num a => a -> a
 counter x = (\x -> x + 1)
             ((\x -> x + 1)
              ((\x -> x) x))
