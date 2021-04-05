@@ -1,6 +1,16 @@
 import Data.List (sort, sortBy)
 import AllNames (names)
 
+compareSurnameWithCompareFunction :: (Ord a1, Ord a2) => (a1, a2) -> (a1, a2) -> Ordering
+compareSurnameWithCompareFunction name1 name2 = if result == EQ
+                                                then compare forename1 forename2
+                                                else result
+      where surname1 = snd name1
+            surname2 = snd name2
+            forename1 = fst name1
+            forename2 = fst name2
+            result = compare surname1 surname2
+
 compareSurname :: Ord a1 => (a2, a1) -> (a3, a1) -> Ordering
 compareSurname name1 name2 = if surname1 > surname2
                                then GT
